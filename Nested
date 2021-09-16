@@ -1,0 +1,13 @@
+marksheet=[]
+scorelist=[]
+if __name__ == '__main__':
+    for _ in range(int(raw_input())):
+        name = raw_input()
+        score = float(raw_input())
+        marksheet=marksheet+[[name,score]]
+        scorelist=scorelist+[score]
+    b=sorted(list(set(scorelist)))[1]
+    
+    for a,c in sorted(marksheet):
+        if c==b:
+                print(a)
